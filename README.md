@@ -1,8 +1,8 @@
-## Minesweeper, The RPG 
+# Minesweeper, The RPG 
 
 ---
 
-# **Project Description**
+## **Project Description**
 
 Creating a minesweeper but with a STORY!!!
 
@@ -20,14 +20,14 @@ We will make an program that randomizes where the bombs are going to be and the 
 
 ---
 
-# **Deliverable**
+## **Deliverable**
 - Source Code
 
 - Documentation
 
 ---
 
-# **Plan**
+## **Plan**
 1. March 1, 2019 - March 15, 2019
 - Create Story outline
 - Outline of algorithm for game
@@ -45,7 +45,7 @@ We will make an program that randomizes where the bombs are going to be and the 
 
 ---
 
-# **Team Members**
+## **Team Members**
 1. Lute B. 
 	Mastermind of minesweeper
 	
