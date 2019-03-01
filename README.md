@@ -32,7 +32,7 @@ We will make an program that randomizes where the bombs are going to be and the 
 
 2. March 15, 2019 - March 22, 2019
 - Create outline of interface/GUI
-- Work on backend codes 
+- Work on coding the program 
 - Create or outline random algorithm
 	
 3. March 22, 2019 - March 29, 2019
