@@ -1,5 +1,7 @@
 # finalproject
 
+---
+
 Project Description
 
 Creating a minesweeper but with a STORY!!!
@@ -18,22 +20,26 @@ Deliverable
 
 2.Documentation
 
+---
+
 Plan
 1. March 1, 2019 - March 15, 2019
-	Create Story outline
-	Outline of algorithm for game
-	Outline for GUI
+- Create Story outline
+- Outline of algorithm for game
+- Outline for GUI
 
 2. March 15, 2019 - March 22, 2019
-	Create outline of interface/GUI
-	Work on backend codes 
-	Create or outline random algorithm
+- Create outline of interface/GUI
+- Work on backend codes 
+- Create or outline random algorithm
 	
-2. March 22, 2019 - March 29, 2019
-	Create Final RPG fight.
-	Perfect story
-	Perfect code
-	
+3. March 22, 2019 - March 29, 2019
+- Create Final RPG fight.
+- Perfect story
+- Perfect code
+
+---
+
 Team Members
 1. Lute B. 
 	Mastermind of minesweeper
