@@ -46,8 +46,9 @@ We will make an program that randomizes where the bombs are going to be and the 
 ---
 
 ## **Team Members**
-1. Lute B. 
+### - Lute B.
 	Mastermind of minesweeper
 	
-2. John Li
-	RPG enthusiast/Programmer
+### - John Li
+	RPG enthusiast/Programmer/Self-proclaimed amazing storyteller
+
