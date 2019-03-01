@@ -1,2 +1,13 @@
 # finalproject
-final project for cs2
+
+Description
+
+Creating a Game
+
+What?
+
+Why?
+
+How?
+
+
