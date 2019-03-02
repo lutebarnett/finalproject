@@ -50,5 +50,5 @@ We will make an program that randomizes where the bombs are going to be and the 
 	Mastermind of minesweeper
 	
 ### - John Li
-	RPG enthusiast/Programmer/Self-proclaimed amazing storyteller
+	RPG enthusiast/Programmer
 
