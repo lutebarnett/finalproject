@@ -1,6 +1,8 @@
 
 public class Randomizer {
-	public static void main(String[] args) {
-		System.out.println("Beginning");
+	private int NumMines = 25;
+	
+	public int getMines() {
+		return NumMines;
 	}
 }
