@@ -13,8 +13,10 @@ public class PlayerScreen extends Application{
 
 		@Override
 		public void start(Stage primaryStage) {
+			//title of the window/stage
 			primaryStage.setTitle("Minesweeper the RPG");
 			
+			//created a single button on the stage/inside the window
 			Button btn = new Button();
 			btn.setText("X");
 
