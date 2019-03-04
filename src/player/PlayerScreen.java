@@ -13,10 +13,10 @@ public class PlayerScreen extends Application{
 
 		@Override
 		public void start(Stage primaryStage) {
-			primaryStage.setTitle("Hello World!");
+			primaryStage.setTitle("Minesweeper the RPG");
 			
-			final Button btn = new Button();
-			btn.setText("Click Me!");
+			Button btn = new Button();
+			btn.setText("X");
 
 			final StackPane root = new StackPane();
 			root.getChildren().add(btn);
