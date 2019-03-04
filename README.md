@@ -51,4 +51,3 @@ We will make an program that randomizes where the bombs are going to be and the 
 	
 ### - John Li
 	RPG enthusiast/Programmer
-
