@@ -3,6 +3,7 @@ package player;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -17,17 +18,17 @@ public class PlayerScreen extends Application{
 			primaryStage.setTitle("Minesweeper the RPG");
 			
 			//created a single button on the stage/inside the window
-			Button btn = new Button();
-			btn.setText("X");
-
-			final StackPane root = new StackPane();
-			root.getChildren().add(btn);
-
-			primaryStage.setScene(new Scene(root, 300, 250));
+			Button button1 = new Button();
+			Button button2 = new Button();
+			
+			GridPane grid = new GridPane();
+			grid.add(button1, 1, 0);
+			grid.add(button2, 2, 0);
+			
+			Scene scene = new Scene(grid, 400, 300);
+			primaryStage.setScene(scene);
 			primaryStage.show();
 		}
-
-		
 		
 	}
 
