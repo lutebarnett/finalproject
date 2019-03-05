@@ -29,16 +29,26 @@ public class Tile {
 		this(false, 0, 0);
 	}
 	
-	
-	
+	/**
+	 * returns the boolean value of the private boolean containMine
+	 * @return returns a boolean value which makes sure whether or not a tile has a mine
+	 */
 	public boolean hasMine() {
 		return containMine;
 	}
 	
+	/**
+	 * returns value of the private int length of the object
+	 * @return returns the location of the tile length only
+	 */	
 	public int getLength() {
 		return length;
 	}
 	
+	/**
+	 * returns value of the private int width of the object
+	 * @return returns the location of the tile Width only
+	 */	
 	public int getWidth() {
 		return width;
 	}
