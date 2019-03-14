@@ -1,0 +1,13 @@
+
+
+Week 1 Report					3/15/2019
+- created and talked about outline of how the game will go
+- plans created:
+	- Will create separate classes for different scenes
+	- Have decided on a 10 by 10 array filled with the Tile classes
+		- will contains 16 mines
+	- Will create a person superclass that will have the subclasses Player and Enemy
+		- There will be multiply kinds of enemies so there might be even more subclasses
+		- Both the Player and Enemy class will inherit variables and abilities from person class that will allow combat
+	- Will create menu, a game scene, and a rpg scene that represent different sections of the game
+- Has started on project by creating a Tile class but more will still be added

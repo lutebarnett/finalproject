@@ -12,6 +12,7 @@ public class Tile {
 	private boolean containMine;
 	private int length;
 	private int width;
+	private boolean flagged = false;
 	
 	public Tile(boolean hasMine, int length, int width) {
 		containMine = hasMine;
@@ -51,6 +52,14 @@ public class Tile {
 	 */	
 	public int getWidth() {
 		return width;
+	}
+	
+	public boolean getFlag() {
+		return flagged;
+	}
+	
+	public void setFlag(boolean a) {
+		flagged = a;
 	}
 	
 	
