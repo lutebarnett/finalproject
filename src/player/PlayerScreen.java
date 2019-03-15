@@ -62,6 +62,7 @@ public class PlayerScreen extends Application{
 			border.setLeft(hBox);
 			border.setCenter(grid); 
 			
+			//Creates the scene for primary stage
 			Scene scene = new Scene(border, 600, 400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
