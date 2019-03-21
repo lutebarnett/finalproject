@@ -9,33 +9,17 @@
 package tiles;
 
 public class Tile {
-	private boolean containMine;
 	private int length;
 	private int width;
 	private boolean flagged = false;
 	
-	public Tile(boolean hasMine, int length, int width) {
-		containMine = hasMine;
+	public Tile(int length, int width) {
 		this.length = length;
 		this.width = width;
 	}
 	
-	public Tile(int length, int width) {
-		this(false, length, width);
-	}
-	
-	//may create another constructor requiring two parameters
-	
 	public Tile() {
-		this(false, 0, 0);
-	}
-	
-	/**
-	 * returns the boolean value of the private boolean containMine
-	 * @return returns a boolean value which makes sure whether or not a tile has a mine
-	 */
-	public boolean hasMine() {
-		return containMine;
+		this(0, 0);
 	}
 	
 	/**
