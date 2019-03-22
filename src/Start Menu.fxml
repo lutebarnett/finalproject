@@ -26,6 +26,9 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="100.0" />
+                     </VBox.margin>
                   </Button>
                   <Button mnemonicParsing="false" text="Quit">
                      <opaqueInsets>
