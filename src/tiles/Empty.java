@@ -23,9 +23,11 @@ public class Empty extends Tile{
 				if(count == getWidth() && i == getLength()) {
 					count++;
 				}
-				
-				if(tiles[i][count] instanceof Mine) {
-					amount++;
+
+				if (count < tiles[0].length && i < tiles.length) {
+					if (tiles[i][count] instanceof Mine) {
+						amount++;
+					}
 				}
 			}
 		}
