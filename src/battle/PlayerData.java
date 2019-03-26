@@ -16,11 +16,11 @@ public class PlayerData extends Character{
 	
 	public void setMines() {
 		try {
-			Scanner input = new Scanner(new File("NumberOfMines.txt"));
-			mines = input.nextInt();
+			Scanner input = new Scanner(new File("src/NumberOfMines.txt"));
+			this.mines = input.nextInt();
 			input.close();
 		} catch (FileNotFoundException e) {
-			mines = 0;
+			this.mines = 0;
 			System.out.println("File not found! Unable to get number of mines!");
 		}
 	}

@@ -1,6 +1,6 @@
 package tiles;
 
-public class Test {
+public class TestTiles {
 	public static void main(String[] args) {
 		Tile[][] tiles = new Tile[3][2];
 		
