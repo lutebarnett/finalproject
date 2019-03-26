@@ -3,10 +3,12 @@ package battle;
 public class Character {
 	private int health;
 	private int attack;
+	private String name;
 	
-	public Character(int health, int attack) {
+	public Character(int health, int attack, String name) {
 		this.health = health;
 		this.attack = attack;
+		this.name = name;
 	}
 	
 	public int getHealth() {
@@ -19,6 +21,10 @@ public class Character {
 	
 	public int dealDamage() {
 		return attack;
+	}
+	
+	public String getName() {
+		return name;
 	}
 
 }

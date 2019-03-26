@@ -9,7 +9,7 @@ public class PlayerData extends Character{
 	private int mines;
 	
 	public PlayerData(int health, int attack) {
-		super(health, attack);
+		super(health, attack, "name");
 		
 		setMines();
 	}
