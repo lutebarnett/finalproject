@@ -9,9 +9,11 @@
 package tiles;
 
 public class Tile {
+	
 	private int length;
 	private int width;
 	private boolean flagged = false;
+	private boolean unknown = true;
 	
 	public Tile(int length, int width) {
 		this.length = length;
@@ -38,12 +40,28 @@ public class Tile {
 		return width;
 	}
 	
+	/**
+	 * returns whether or not something was flagged
+	 * @return returns the boolean flagged which represents whechter or not something was flagged
+	 */
 	public boolean getFlag() {
 		return flagged;
 	}
 	
+	/**
+	 * sets whether or not something was flagged
+	 * sets the flagged boolean to a or whatever the person decides to put the boolean as
+	 */
 	public void setFlag(boolean a) {
 		flagged = a;
+	}
+	
+	public boolean getUnknown() {
+		return unknown;
+	}
+	
+	public void revealUnknown() {
+		unknown = false;
 	}
 	
 	
