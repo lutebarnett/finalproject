@@ -10,12 +10,12 @@ public class Empty extends Tile{
 	public int nearbyMines(Tile[][] tiles) {
 		int amount = 0; 
 
-		for (int i = getLength() - 1; i < getLength() + 1; i++) {
+		for (int i = getLength() - 1; i <= getLength() + 1; i++) {
 			if (i < 0) {
 				i = 0;
 			}
 
-			for (int count = getWidth() - 1; count < getWidth() + 1; count++) {
+			for (int count = getWidth() - 1; count <= getWidth() + 1; count++) {
 				if(count < 0) {
 					count++;
 				}
@@ -23,9 +23,11 @@ public class Empty extends Tile{
 				if(count == getWidth() && i == getLength()) {
 					count++;
 				}
-				
-				if(tiles[i][count] instanceof Mine) {
-					amount++;
+
+				if (count < tiles[0].length && i < tiles.length) {
+					if (tiles[i][count] instanceof Mine) {
+						amount++;
+					}
 				}
 			}
 		}
