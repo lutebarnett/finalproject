@@ -12,12 +12,12 @@
    <top>
       <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Text boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textOrigin="CENTER">
+            <Text fx:id="enemyName" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textOrigin="CENTER">
                <font>
                   <Font size="32.0" />
                </font>
             </Text>
-            <Text fx:id="myText" strokeType="OUTSIDE" strokeWidth="0.0" text="Health: [IIIIIIIIIIIIIIIIIIIIIIII]">
+            <Text fx:id="enemyHealth" strokeType="OUTSIDE" strokeWidth="0.0" text="Health: [IIIIIIIIIIIIIIIIIIII]">
                <font>
                   <Font size="16.0" />
                </font>
@@ -28,8 +28,8 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" spacing="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player Actions" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Actions" />
+            <Text fx:id="playerActions" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Actions" />
+            <Text fx:id="enemyActions" strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Actions" />
          </children>
          <padding>
             <Insets left="10.0" top="30.0" />
@@ -42,12 +42,12 @@
    <bottom>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player">
+            <Text fx:id="player" strokeType="OUTSIDE" strokeWidth="0.0" text="Player">
                <font>
                   <Font size="23.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health: [IIIIIIIIIIIIIIIIIIIIIIII]">
+            <Text fx:id="playerHealth" strokeType="OUTSIDE" strokeWidth="0.0" text="Health: [IIIIIIIIIIIIIIIIIIIIIIII]">
                <font>
                   <Font size="14.0" />
                </font>
@@ -55,9 +55,9 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
                   <Button fx:id="attack" mnemonicParsing="false" text="Attack" />
-                  <Button mnemonicParsing="false" text="Throw Mines" />
-                  <Button mnemonicParsing="false" text="Heal" />
-                  <Button mnemonicParsing="false" text="Run" />
+                  <Button fx:id="ThrowMines" mnemonicParsing="false" text="Throw Mines" />
+                  <Button fx:id="Heal" mnemonicParsing="false" text="Heal" />
+                  <Button fx:id="Run" mnemonicParsing="false" text="Run" />
                </children>
             </HBox>
          </children>

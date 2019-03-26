@@ -19,9 +19,27 @@ import javafx.stage.Stage;
 public class RPGScreen extends Application implements Initializable{
 	
 	@FXML
-	Text myText;
+	Text enemyHealth;
+	@FXML
+	Text playerHealth;
+	@FXML
+	Text enemyName;
+	@FXML
+	Text player;
+	@FXML
+	Text enemyActions;
+	@FXML
+	Text playerActions;
+	
 	@FXML
 	Button attack;
+	@FXML
+	Button ThrowMines;
+	@FXML
+	Button Heal;
+	@FXML
+	Button Run;
+	
 	
 	Enemy e = new Enemy (100,100);
 	
@@ -49,17 +67,24 @@ public class RPGScreen extends Application implements Initializable{
 			public void handle(ActionEvent event) {
 				e.takeDamage(10);
 				
-				StringBuilder s = new StringBuilder("[");
+				StringBuilder s = new StringBuilder("Health: [");
+				
+				double point = e.getMaxHealth()/20.0;
+				double health = e.getHealth();
 				
 				for(int i = 0; i < 20; i++) {
-					
+					if(health - point < 0) {
+						s.append(" ");
+					}
+					else {
+						s.append("I");
+						health = health - point;
+					}
 				}
 				
 				s.append("]");
-				myText.setText(String.format("%d", e.getHealth()));
+				enemyHealth.setText(String.format("%s", s.toString()));
 			}
 		});
-
 	}
-
 }
