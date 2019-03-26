@@ -5,6 +5,7 @@ public class Test {
 		Tile[][] tiles = new Tile[3][3];
 		
 		tiles[0][0] = new Mine();
+		tiles[2][2] = new Mine();
 		tiles[1][1] = new Empty(1,1);
 		
 		System.out.println(((Empty) tiles[1][1]).nearbyMines(tiles));
