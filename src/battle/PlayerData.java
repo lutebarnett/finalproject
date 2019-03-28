@@ -8,8 +8,8 @@ public class PlayerData extends Character{
 	
 	private int mines;
 	
-	public PlayerData(int health, int attack) {
-		super(health, attack, "name");
+	public PlayerData(int health, int attack, String name) {
+		super(health, attack, name);
 		
 		setMines();
 	}
@@ -38,5 +38,4 @@ public class PlayerData extends Character{
 		
 		return 500;
 	}
-
 }

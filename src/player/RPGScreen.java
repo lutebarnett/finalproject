@@ -3,7 +3,9 @@ package player;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import battle.Enemy;
+import javax.swing.JOptionPane;
+
+import battle.*;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -41,7 +43,8 @@ public class RPGScreen extends Application implements Initializable{
 	Button Run;
 	
 	
-	Enemy e = new Enemy (100,100);
+	Enemy e = new Enemy (100,10);
+	PlayerData controller = new PlayerData(200, 20, "Player");
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -65,7 +68,7 @@ public class RPGScreen extends Application implements Initializable{
 
 			@Override
 			public void handle(ActionEvent event) {
-				e.takeDamage(10);
+				e.takeDamage(controller.dealDamage());
 				
 				StringBuilder s = new StringBuilder("Health: [");
 				
@@ -84,7 +87,101 @@ public class RPGScreen extends Application implements Initializable{
 				
 				s.append("]");
 				enemyHealth.setText(String.format("%s", s.toString()));
+				
+				playerActions.setText(String.format("You punched the enemy! You have dealt %d to the enemy", controller.dealDamage()));
+				
+				if(e.getHealth() == 0) {
+					enemyActions.setText("The enemy has surcome to their wounds! They have died!");
+				}
+				fightFinished();
+			}
+		});
+		
+		ThrowMines.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				int damage = controller.useMine();
+				e.takeDamage(damage);
+				
+				StringBuilder s = new StringBuilder("Health: [");
+				
+				double point = e.getMaxHealth()/20.0;
+				double health = e.getHealth();
+				
+				for(int i = 0; i < 20; i++) {
+					if(health - point < 0) {
+						s.append(" ");
+					}
+					else {
+						s.append("I");
+						health = health - point;
+					}
+				}
+				
+				s.append("]");
+				enemyHealth.setText(String.format("%s", s.toString()));
+				
+				playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
+				
+				if(e.getHealth() == 0) {
+					enemyActions.setText("The enemy has surcome to their wounds! They have died!");
+				}
+				
+				fightFinished();
+			}
+		});
+		
+		Heal.setOnAction(new EventHandler<ActionEvent>() {
+			
+			@Override
+			public void handle(ActionEvent event) {
+				int healAmount = 30;
+
+				if (controller.getHealth() + healAmount > controller.getMaxHealth()) {
+					controller.setHealth(controller.getMaxHealth());
+				} else {
+					controller.setHealth(controller.getHealth() + healAmount);
+				}
+
+				if (controller.getHealth() == controller.getMaxHealth()) {
+					playerActions.setText(String.format("You have healed yourself to max health!"));
+				} else {
+					playerActions.setText(String.format("You have healed yourself by %d health!", healAmount));
+				}
+			}
+		});
+		
+		Run.setOnAction(new EventHandler<ActionEvent>() {
+			
+			@Override
+			public void handle(ActionEvent event) {
+				JOptionPane.showMessageDialog(null, "You have run away!");
+				playerActions.setText("You have run away!");
+				endBattle();
 			}
 		});
 	}
+	
+	public void fightFinished() {
+		if(e.getHealth() <= 0) {
+			JOptionPane.showMessageDialog(null, "The battle has ended. YOU WON!");
+			playerActions.setText("You have won!");
+			endBattle();
+		} else if(controller.getHealth() <= 0) {
+			JOptionPane.showMessageDialog(null, "The battle has ended. You lost.");
+			playerActions.setText("You have lost.");
+			endBattle();
+		}
+		
+	}
+	
+	public void endBattle() {
+		attack.setVisible(false);
+		ThrowMines.setVisible(false);
+		Heal.setVisible(false);
+		Run.setVisible(false);
+		enemyActions.setVisible(false);
+	}
+	
 }
