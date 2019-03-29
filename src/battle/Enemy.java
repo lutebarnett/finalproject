@@ -1,19 +1,13 @@
 package battle;
 
 
-public class Enemy extends Character{
-
-	private int actions;
+public abstract class Enemy extends Character{
 	
-	public Enemy(int health, int attack, int actions) {
-		super(health, attack, "name");
-		this.actions = actions;
+	public Enemy(int health, int attack, String name) {
+		super(health, attack, name);
 	}
 	
-	public int random() {
-		int num = (int) Math.random()*(actions + 1);
-		
-		return num;
-	}
+	abstract String description();
 	
+	abstract String randomActions();
 }

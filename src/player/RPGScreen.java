@@ -43,7 +43,7 @@ public class RPGScreen extends Application implements Initializable{
 	Button Run;
 	
 	
-	Enemy e = new Enemy (100,10);
+	Minion e = new Minion ();
 	PlayerData controller = new PlayerData(200, 20, "Player");
 	
 	public static void main(String[] args) {
@@ -52,6 +52,7 @@ public class RPGScreen extends Application implements Initializable{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
 		FXMLLoader screen = new FXMLLoader(getClass().getResource("BattleScreen.fxml"));
 		
 		BorderPane p = screen.load();
@@ -162,6 +163,8 @@ public class RPGScreen extends Application implements Initializable{
 			}
 		});
 	}
+	
+	
 	
 	public void fightFinished() {
 		if(e.getHealth() <= 0) {
