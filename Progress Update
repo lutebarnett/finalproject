@@ -1,5 +1,27 @@
 # Progress Updates 
-## Week 1 (March 22 - March 29)
+## Week 2 (March 29 - April 5)
+
+### What did your team do last week?
+* We created an RPGScreen that allows the user to battle against an enemy
+* Remade the main menu as well as finding a way to create a brand new scene with a single button
+
+### What will you do this week?
+* Create a strange story for said RPG
+* Find a way for the main menu to delete itself by a single click of a button
+* Somehow create a transition from the main menu to the game to an RPG battle
+	- In other words, how to make the scenes transition from one things to another
+* Remake the RPG battle scene in such a way that the battle happens with a wide range on enemies
+	- In other words, make it so that the enemies that are being fought, are different from time to time
+
+### Any blocking issues/challenges need to be addressed?
+* We have no idea on how to transition from one scene to another scene while deleting the previous window
+* We also have no idea on how to purposefully influence the scene when it starts up.
+	- For example, in scene builder a button will have one name but we want it so that the text on the button can be immediately changed
+	  by itself when the window pops up
+* We need a better way to talk to our newest group member, James
+	- And better coordination when it comes to meeting up and working on the project
+
+## Week 2 (March 22 - March 29)
 
 ### What did your team do last week?
 * Create the new subclasses of Tile, Mine and Empty
