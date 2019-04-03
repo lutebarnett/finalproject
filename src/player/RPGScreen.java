@@ -63,7 +63,6 @@ public class RPGScreen extends Application implements Initializable{
 	public void start(Stage primaryStage) throws Exception {
 		
 		FXMLLoader screen = new FXMLLoader(getClass().getResource("BattleScreen.fxml"));
-		
 		BorderPane p = screen.load();
 		
 		Scene scene = new Scene(p);
@@ -74,6 +73,8 @@ public class RPGScreen extends Application implements Initializable{
 
 	@Override
 	public void initialize(URL location, ResourceBundle resource) {
+		returnMenu.setVisible(false); 
+		nextGame.setVisible(false);
 		attack.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -85,12 +86,7 @@ public class RPGScreen extends Application implements Initializable{
 				
 				playerActions.setText(String.format("You punched the enemy! You have dealt %d to the enemy", controller.dealDamage()));
 				
-				if(e.getHealth() == 0) {
-					enemyActions.setText("The enemy has surcome to their wounds! They have died!");
-				} else {
-					enemyReaction();
-				}
-				fightFinished();
+				fight();
 			}
 		});
 		
@@ -106,13 +102,8 @@ public class RPGScreen extends Application implements Initializable{
 				
 				playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
 				
-				if(e.getHealth() == 0) {
-					enemyActions.setText("The enemy has surcome to their wounds! They have died!");
-				} else {
-					enemyReaction();
-				}
 				
-				fightFinished();
+				fight();
 			}
 		});
 		
@@ -140,7 +131,7 @@ public class RPGScreen extends Application implements Initializable{
 				
 				enemyReaction();
 				
-				fightFinished();
+				fight();
 				
 			}
 		});
@@ -158,15 +149,22 @@ public class RPGScreen extends Application implements Initializable{
 	
 	
 	
-	public void fightFinished() {
-		if(e.getHealth() <= 0) {
+	public void fight() {
+		if(e.getHealth() == 0) {
+			enemyActions.setText("The enemy has surcome to their wounds! They have died!");
 			JOptionPane.showMessageDialog(null, "The battle has ended. YOU WON!");
 			playerActions.setText("You have won!");
 			endBattle();
-		} else if(controller.getHealth() <= 0) {
+			nextGame.setVisible(true);
+		} else {
+			enemyReaction();
+		}
+		
+		if(controller.getHealth() <= 0) {
 			JOptionPane.showMessageDialog(null, "The battle has ended. You lost.");
 			playerActions.setText("You have lost.");
 			endBattle();
+			returnMenu.setVisible(true);
 		}
 		
 	}

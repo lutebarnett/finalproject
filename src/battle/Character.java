@@ -50,7 +50,7 @@ public class Character {
 		int min = 1;
 		int range = max - min;
 		
-		int random = (int) Math.random()*range + min;
+		int random = (int) (Math.random()*range) + min;
 		
 		if(random == 50) {
 			return true;
