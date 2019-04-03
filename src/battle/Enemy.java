@@ -9,5 +9,5 @@ public abstract class Enemy extends Character{
 	
 	abstract String description();
 	
-	abstract String randomActions();
+	abstract Action randomActions();
 }

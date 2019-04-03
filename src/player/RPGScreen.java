@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 import battle.*;
+import battle.Character;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
 
 public class RPGScreen extends Application implements Initializable{
 	
+	//Texts that describe situations
 	@FXML
 	Text enemyHealth;
 	@FXML
@@ -33,6 +35,7 @@ public class RPGScreen extends Application implements Initializable{
 	@FXML
 	Text playerActions;
 	
+	//Buttons that the player uses to initiate actions
 	@FXML
 	Button attack;
 	@FXML
@@ -41,6 +44,12 @@ public class RPGScreen extends Application implements Initializable{
 	Button Heal;
 	@FXML
 	Button Run;
+	
+	//Buttons that will appear after battle is over
+	@FXML
+	Button returnMenu;
+	@FXML
+	Button nextGame;
 	
 	
 	Minion e = new Minion ();
@@ -71,28 +80,15 @@ public class RPGScreen extends Application implements Initializable{
 			public void handle(ActionEvent event) {
 				e.takeDamage(controller.dealDamage());
 				
-				StringBuilder s = new StringBuilder("Health: [");
-				
-				double point = e.getMaxHealth()/20.0;
-				double health = e.getHealth();
-				
-				for(int i = 0; i < 20; i++) {
-					if(health - point < 0) {
-						s.append(" ");
-					}
-					else {
-						s.append("I");
-						health = health - point;
-					}
-				}
-				
-				s.append("]");
+				StringBuilder s = alterHealth(e);
 				enemyHealth.setText(String.format("%s", s.toString()));
 				
 				playerActions.setText(String.format("You punched the enemy! You have dealt %d to the enemy", controller.dealDamage()));
 				
 				if(e.getHealth() == 0) {
 					enemyActions.setText("The enemy has surcome to their wounds! They have died!");
+				} else {
+					enemyReaction();
 				}
 				fightFinished();
 			}
@@ -105,28 +101,15 @@ public class RPGScreen extends Application implements Initializable{
 				int damage = controller.useMine();
 				e.takeDamage(damage);
 				
-				StringBuilder s = new StringBuilder("Health: [");
-				
-				double point = e.getMaxHealth()/20.0;
-				double health = e.getHealth();
-				
-				for(int i = 0; i < 20; i++) {
-					if(health - point < 0) {
-						s.append(" ");
-					}
-					else {
-						s.append("I");
-						health = health - point;
-					}
-				}
-				
-				s.append("]");
+				StringBuilder s = alterHealth(e);
 				enemyHealth.setText(String.format("%s", s.toString()));
 				
 				playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
 				
 				if(e.getHealth() == 0) {
 					enemyActions.setText("The enemy has surcome to their wounds! They have died!");
+				} else {
+					enemyReaction();
 				}
 				
 				fightFinished();
@@ -150,6 +133,15 @@ public class RPGScreen extends Application implements Initializable{
 				} else {
 					playerActions.setText(String.format("You have healed yourself by %d health!", healAmount));
 				}
+				
+				StringBuilder s = alterHealth(controller);
+				
+				playerHealth.setText(s.toString());
+				
+				enemyReaction();
+				
+				fightFinished();
+				
 			}
 		});
 		
@@ -187,4 +179,36 @@ public class RPGScreen extends Application implements Initializable{
 		enemyActions.setVisible(false);
 	}
 	
+	public void enemyReaction() {
+		Action a = e.randomActions();
+		
+		enemyActions.setText(a.getDesciption());
+		controller.takeDamage(a.getDamage());
+		
+		StringBuilder s = alterHealth(controller);
+		
+		playerHealth.setText(s.toString());
+		
+	}
+	
+	public StringBuilder alterHealth(Character c) {
+		StringBuilder s = new StringBuilder("Health: [");
+		
+		double point = c.getMaxHealth()/20.0;
+		double health = c.getHealth();
+		
+		for(int i = 0; i < 20; i++) {
+			if(health - point < 0) {
+				s.append(" ");
+			}
+			else {
+				s.append("I");
+				health = health - point;
+			}
+		}
+		
+		s.append("]");
+		
+		return s;
+	}
 }
