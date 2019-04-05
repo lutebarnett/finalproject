@@ -47,11 +47,13 @@
                   <Font size="23.0" />
                </font>
             </Text>
-            <Text fx:id="playerHealth" strokeType="OUTSIDE" strokeWidth="0.0" text="Health: [IIIIIIIIIIIIIIIIIIIIIIII]">
+            <Text fx:id="playerHealth" strokeType="OUTSIDE" strokeWidth="0.0" text="Health: [IIIIIIIIIIIIIIIIIIII]">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
+            <Button fx:id="nextGame" mnemonicParsing="false" text="Start New Game" />
+            <Button fx:id="returnMenu" mnemonicParsing="false" text="Return to Main Menu" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
                   <Button fx:id="attack" mnemonicParsing="false" text="Attack" />

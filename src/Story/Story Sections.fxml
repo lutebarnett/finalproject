@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <BorderPane layoutX="-19.0" layoutY="-7.0" prefHeight="531.0" prefWidth="838.0">
+         <bottom>
+            <VBox alignment="TOP_CENTER" prefHeight="531.0" prefWidth="846.0" spacing="30.0" BorderPane.alignment="CENTER">
+               <opaqueInsets>
+                  <Insets bottom="10.0" />
+               </opaqueInsets>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 1: Bad Delays">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 2: The Real Beginning">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 3: Too Easy">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 4: Final Battle Already?">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="70.0" />
+               </padding>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
