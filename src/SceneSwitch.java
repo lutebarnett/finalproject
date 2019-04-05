@@ -30,28 +30,30 @@ public class SceneSwitch implements Initializable{
 	}
 	
 	 @FXML
-	   private void openMinefield() throws IOException{
-	        stage = (Stage) startBtn.getScene().getWindow();
-	        Pane root;
-	        root = (Pane) FXMLLoader.load(getClass().getResource("minefield.fxml"));
-	        Scene scene = new Scene(root);
-	        stage.setScene(scene);
-	        System.out.println("minefeild.fxml opened");
-	   }
-	 @FXML
-	 	private void quitGame() {
+	 private void openMinefield() throws IOException{
+		 stage = (Stage) startBtn.getScene().getWindow();
+		 Pane root;
+		 root = (Pane) FXMLLoader.load(getClass().getResource("minefield.fxml"));
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 System.out.println("minefeild.fxml opened");
+	 }
+	 
+	 @FXML	
+	 private void quitGame() {
 		 System.out.println("Quitting game");
+		 
 		 System.exit(0);
 	 }
 	 
 	 @FXML
-	   private void openMainmenu() throws IOException{
-	        stage = (Stage) testBtn.getScene().getWindow();
-	        Pane root;
-	        root = (Pane) FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
-	        Scene scene = new Scene(root);
-	        stage.setScene(scene);
-	        System.out.println("mainMenud.fxml opened");
-	   }
+	 private void openMainmenu() throws IOException{
+		 stage = (Stage) testBtn.getScene().getWindow();
+		 Pane root;
+		 root = (Pane) FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 System.out.println("mainMenud.fxml opened");
+	 }
 
 }
