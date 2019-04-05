@@ -75,8 +75,9 @@ public class RPGScreen extends Application implements Initializable{
 	public void initialize(URL location, ResourceBundle resource) {
 		returnMenu.setVisible(false); 
 		nextGame.setVisible(false);
+		enemyName.setText(e.getName());
+		
 		attack.setOnAction(new EventHandler<ActionEvent>() {
-
 			@Override
 			public void handle(ActionEvent event) {
 				e.takeDamage(controller.dealDamage());
@@ -91,19 +92,19 @@ public class RPGScreen extends Application implements Initializable{
 		});
 		
 		ThrowMines.setOnAction(new EventHandler<ActionEvent>() {
-
 			@Override
 			public void handle(ActionEvent event) {
 				int damage = controller.useMine();
-				e.takeDamage(damage);
-				
-				StringBuilder s = alterHealth(e);
-				enemyHealth.setText(String.format("%s", s.toString()));
-				
-				playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
-				
-				
-				fight();
+				if (damage == -1) {
+					playerActions.setText("Unable to do action! Please try something else!");
+				} else {
+					e.takeDamage(damage);
+					StringBuilder s = alterHealth(e);
+					enemyHealth.setText(String.format("%s", s.toString()));
+					playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
+
+					fight();
+				}
 			}
 		});
 		
@@ -126,18 +127,15 @@ public class RPGScreen extends Application implements Initializable{
 				}
 				
 				StringBuilder s = alterHealth(controller);
-				
 				playerHealth.setText(s.toString());
 				
 				enemyReaction();
-				
 				fight();
 				
 			}
 		});
 		
 		Run.setOnAction(new EventHandler<ActionEvent>() {
-			
 			@Override
 			public void handle(ActionEvent event) {
 				JOptionPane.showMessageDialog(null, "You have run away!");
@@ -146,8 +144,6 @@ public class RPGScreen extends Application implements Initializable{
 			}
 		});
 	}
-	
-	
 	
 	public void fight() {
 		if(e.getHealth() == 0) {
@@ -179,19 +175,15 @@ public class RPGScreen extends Application implements Initializable{
 	
 	public void enemyReaction() {
 		Action a = e.randomActions();
-		
 		enemyActions.setText(a.getDesciption());
 		controller.takeDamage(a.getDamage());
 		
 		StringBuilder s = alterHealth(controller);
-		
 		playerHealth.setText(s.toString());
-		
 	}
 	
 	public StringBuilder alterHealth(Character c) {
 		StringBuilder s = new StringBuilder("Health: [");
-		
 		double point = c.getMaxHealth()/20.0;
 		double health = c.getHealth();
 		
@@ -204,7 +196,6 @@ public class RPGScreen extends Application implements Initializable{
 				health = health - point;
 			}
 		}
-		
 		s.append("]");
 		
 		return s;

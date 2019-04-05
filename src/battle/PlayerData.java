@@ -2,6 +2,7 @@ package battle;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class PlayerData extends Character{
@@ -15,8 +16,9 @@ public class PlayerData extends Character{
 	}
 	
 	public void setMines() {
-		try {
-			Scanner input = new Scanner(new File("src/NumberOfMines.txt"));
+		try (Scanner input = new Scanner(new File("src/NumberOfMines.txt"));
+			){
+			
 			this.mines = input.nextInt();
 			input.close();
 		} catch (FileNotFoundException e) {
@@ -35,7 +37,11 @@ public class PlayerData extends Character{
 		}
 		
 		mines--;
-		
+		try(PrintWriter fin = new PrintWriter(new File("src/NumberOfMines.txt"));){
+			fin.print(mines);
+		}catch(FileNotFoundException e) {
+			return -1;
+		}
 		return 500;
 	}
 }

@@ -3,7 +3,7 @@ package battle;
 public class Minion extends Enemy{
 	
 	public Minion() {
-		super(500,10,"Minion");
+		super(200,3,"Minion");
 	}
 	
 	public String description() {
