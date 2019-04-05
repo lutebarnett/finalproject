@@ -1,25 +1,15 @@
 package player;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javax.swing.JOptionPane;
 
 import battle.*;
 import battle.Character;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
-public class RPGScreen extends Application implements Initializable{
+public class RPGScreen{
 	
 	//Texts that describe situations
 	@FXML
@@ -55,96 +45,69 @@ public class RPGScreen extends Application implements Initializable{
 	Minion e = new Minion ();
 	PlayerData controller = new PlayerData(200, 20, "Player");
 	
-	public static void main(String[] args) {
-		launch(args);
-	}
-
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		
-		FXMLLoader screen = new FXMLLoader(getClass().getResource("BattleScreen.fxml"));
-		BorderPane p = screen.load();
-		
-		Scene scene = new Scene(p);
-		primaryStage.setTitle("Minesweeper the RPG");
-		primaryStage.setScene(scene);
-		primaryStage.show();
-	}
-
-	@Override
-	public void initialize(URL location, ResourceBundle resource) {
-		returnMenu.setVisible(false); 
-		nextGame.setVisible(false);
-		enemyName.setText(e.getName());
-		
-		attack.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				e.takeDamage(controller.dealDamage());
-				
-				StringBuilder s = alterHealth(e);
-				enemyHealth.setText(String.format("%s", s.toString()));
-				
-				playerActions.setText(String.format("You punched the enemy! You have dealt %d to the enemy", controller.dealDamage()));
-				
-				fight();
-			}
-		});
-		
-		ThrowMines.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				int damage = controller.useMine();
-				if (damage == -1) {
-					playerActions.setText("Unable to do action! Please try something else!");
-				} else {
-					e.takeDamage(damage);
-					StringBuilder s = alterHealth(e);
-					enemyHealth.setText(String.format("%s", s.toString()));
-					playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
-
-					fight();
-				}
-			}
-		});
-		
-		Heal.setOnAction(new EventHandler<ActionEvent>() {
+	//returnMenu.setVisible(false); 
+	//nextGame.setVisible(false);
+	//enemyName.setText(e.getName());
+	
+	@FXML
+	public void attack() {
+		e.takeDamage(controller.dealDamage());				
+		StringBuilder s = alterHealth(e);
+		enemyHealth.setText(String.format("%s", s.toString()));
 			
-			@Override
-			public void handle(ActionEvent event) {
-				int healAmount = 30;
-
-				if (controller.getHealth() + healAmount > controller.getMaxHealth()) {
-					controller.setHealth(controller.getMaxHealth());
-				} else {
-					controller.setHealth(controller.getHealth() + healAmount);
-				}
-
-				if (controller.getHealth() == controller.getMaxHealth()) {
-					playerActions.setText(String.format("You have healed yourself to max health!"));
-				} else {
-					playerActions.setText(String.format("You have healed yourself by %d health!", healAmount));
-				}
-				
-				StringBuilder s = alterHealth(controller);
-				playerHealth.setText(s.toString());
-				
-				enemyReaction();
-				fight();
-				
-			}
-		});
-		
-		Run.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				JOptionPane.showMessageDialog(null, "You have run away!");
-				playerActions.setText("You have run away!");
-				endBattle();
-			}
-		});
+		playerActions.setText(String.format("You punched the enemy! You have dealt %d to the enemy", controller.dealDamage()));
+			
+		fight();
 	}
 	
+	@FXML
+	public void ThrowMines(ActionEvent event) {
+			int damage = controller.useMine();
+			if (damage == -1) {
+			playerActions.setText("Unable to do action! Please try something else!");
+		} else {
+			e.takeDamage(damage);
+			StringBuilder s = alterHealth(e);
+			enemyHealth.setText(String.format("%s", s.toString()));
+			playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
+				
+			fight();
+		}
+	}
+		
+	@FXML
+	public void heal() {
+		int healAmount = 30;
+		if (controller.getHealth() + healAmount > controller.getMaxHealth()) {
+			controller.setHealth(controller.getMaxHealth());
+		} else {
+			controller.setHealth(controller.getHealth() + healAmount);
+		}
+
+		if (controller.getHealth() == controller.getMaxHealth()) {
+			playerActions.setText(String.format("You have healed yourself to max health!"));
+		} else {
+			playerActions.setText(String.format("You have healed yourself by %d health!", healAmount));
+		}
+				
+		StringBuilder s = alterHealth(controller);
+		playerHealth.setText(s.toString());
+			
+		enemyReaction();
+		fight();
+			
+	}
+		
+		
+	@FXML	
+	public void run() {
+		JOptionPane.showMessageDialog(null, "You have run away!");
+		playerActions.setText("You have run away!");
+		endBattle();
+	}
+		
+	
+	@FXML
 	public void fight() {
 		if(e.getHealth() == 0) {
 			enemyActions.setText("The enemy has surcome to their wounds! They have died!");
