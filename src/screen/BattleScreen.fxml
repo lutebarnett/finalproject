@@ -52,11 +52,11 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" text="Start New Game" />
+            <Button fx:id="nextGame" mnemonicParsing="false" text="Start New Game" />
             <Button fx:id="returnMenu" mnemonicParsing="false" text="Return to Main Menu" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
-                  <Button fx:id="PlayerAttack" mnemonicParsing="false" onAction="#attack" text="Attack" />
+                  <Button fx:id="attack" mnemonicParsing="false" onAction="#attack" text="Attack" />
                   <Button fx:id="ThrowMines" mnemonicParsing="false" onAction="#ThrowMines" text="Throw Mines" />
                   <Button fx:id="Heal" mnemonicParsing="false" onAction="#heal" text="Heal" />
                   <Button fx:id="Run" mnemonicParsing="false" onAction="#run" text="Run" />

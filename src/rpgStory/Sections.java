@@ -1,6 +1,9 @@
 package rpgStory;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,12 +24,20 @@ public class Sections {
 	}
 	
 	@FXML
-	 private void openRpgBattle() throws IOException{
-		 stage = (Stage) battleBtn.getScene().getWindow();
-		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/screen/BattleScreen.fxml"));
-		 Scene scene = new Scene(root);
-		 stage.setScene(scene);
-		 System.out.println("BattleScreen.fxml opened");
+	 private void openRpgBattle1() throws IOException{
+		try {
+			PrintWriter fin = new PrintWriter(new File("/screen/BattleDecisions.txt"));
+			fin.println(1);
+		}catch(FileNotFoundException ex) {
+			
+		}
+		
+		
+		stage = (Stage) battleBtn.getScene().getWindow();
+		Pane root = (Pane) FXMLLoader.load(getClass().getResource("/screen/BattleScreen.fxml"));
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		System.out.println("BattleScreen.fxml opened");
 		 
-	 }
+	}
 }

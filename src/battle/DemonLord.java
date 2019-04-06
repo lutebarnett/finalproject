@@ -2,7 +2,7 @@ package battle;
 
 public class DemonLord extends Enemy {
 	
-	DemonLord(int i, int b, String c){
+	public DemonLord(){
 		super(100000, 3000, "Itmic Algor");
 	}
 	
