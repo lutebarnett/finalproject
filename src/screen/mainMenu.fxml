@@ -14,5 +14,6 @@
       </Text>
       <Button fx:id="startBtn" layoutX="123.0" layoutY="276.0" mnemonicParsing="false" onAction="#openMinefield" text="Start" />
       <Button fx:id="quitBtn" layoutX="403.0" layoutY="276.0" mnemonicParsing="false" onAction="#quitGame" text="Quit" />
+      <Button fx:id="rpgBtn" layoutX="255.0" layoutY="276.0" mnemonicParsing="false" onAction="#openRpgStory" text="RPG Story" />
    </children>
 </Pane>

@@ -46,7 +46,7 @@ public class Character {
 	 * 
 	 */
 	public boolean critChance() {
-		int max = 100;
+		int max = 1000;
 		int min = 1;
 		int range = max - min;
 		

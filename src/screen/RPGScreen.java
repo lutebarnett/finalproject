@@ -1,15 +1,18 @@
-package player;
+package screen;
 
+
+import java.net.URL;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
-
 import battle.*;
 import battle.Character;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
-public class RPGScreen{
+public class RPGScreen extends Opponent implements Initializable{
 	
 	//Texts that describe situations
 	@FXML
@@ -41,18 +44,21 @@ public class RPGScreen{
 	@FXML
 	Button nextGame;
 	
+	Opponent e = new Opponent();
 	
-	Minion e = new Minion ();
 	PlayerData controller = new PlayerData(200, 20, "Player");
 	
-	//returnMenu.setVisible(false); 
-	//nextGame.setVisible(false);
-	//enemyName.setText(e.getName());
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {		
+		returnMenu.setVisible(false); 
+		nextGame.setVisible(false);
+		enemyName.setText(e.getOpponent().getName());
+	}
 	
 	@FXML
 	public void attack() {
-		e.takeDamage(controller.dealDamage());				
-		StringBuilder s = alterHealth(e);
+		e.getOpponent().takeDamage(controller.dealDamage());				
+		StringBuilder s = alterHealth(e.getOpponent());
 		enemyHealth.setText(String.format("%s", s.toString()));
 			
 		playerActions.setText(String.format("You punched the enemy! You have dealt %d to the enemy", controller.dealDamage()));
@@ -63,11 +69,11 @@ public class RPGScreen{
 	@FXML
 	public void ThrowMines(ActionEvent event) {
 			int damage = controller.useMine();
-			if (damage == -1) {
+		if (damage == -1) {
 			playerActions.setText("Unable to do action! Please try something else!");
 		} else {
-			e.takeDamage(damage);
-			StringBuilder s = alterHealth(e);
+			e.getOpponent().takeDamage(damage);
+			StringBuilder s = alterHealth(e.getOpponent());
 			enemyHealth.setText(String.format("%s", s.toString()));
 			playerActions.setText(String.format("You thew a mine!%nCRITICAL DAMAGE!!!%n%d DAMAGE WAS DEALT TO THE ENEMY", damage));
 				
@@ -109,7 +115,7 @@ public class RPGScreen{
 	
 	@FXML
 	public void fight() {
-		if(e.getHealth() == 0) {
+		if(e.getOpponent().getHealth() == 0) {
 			enemyActions.setText("The enemy has surcome to their wounds! They have died!");
 			JOptionPane.showMessageDialog(null, "The battle has ended. YOU WON!");
 			playerActions.setText("You have won!");
@@ -137,7 +143,7 @@ public class RPGScreen{
 	}
 	
 	public void enemyReaction() {
-		Action a = e.randomActions();
+		Action a = e.getOpponent().randomActions();
 		enemyActions.setText(a.getDesciption());
 		controller.takeDamage(a.getDamage());
 		

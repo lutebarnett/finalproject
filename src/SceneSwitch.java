@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,8 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
-
 
 
 public class SceneSwitch implements Initializable{
@@ -21,6 +18,8 @@ public class SceneSwitch implements Initializable{
 	Button testBtn;
 	@FXML 
 	Button quitBtn;
+	@FXML
+	Button rpgBtn;
 	
 	private Stage stage;
 	
@@ -36,7 +35,7 @@ public class SceneSwitch implements Initializable{
 		 root = (Pane) FXMLLoader.load(getClass().getResource("minefield.fxml"));
 		 Scene scene = new Scene(root);
 		 stage.setScene(scene);
-		 System.out.println("minefeild.fxml opened");
+		 System.out.println("minefield.fxml opened");
 	 }
 	 
 	 @FXML	
@@ -50,10 +49,19 @@ public class SceneSwitch implements Initializable{
 	 private void openMainmenu() throws IOException{
 		 stage = (Stage) testBtn.getScene().getWindow();
 		 Pane root;
-		 root = (Pane) FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+		 root = (Pane) FXMLLoader.load(getClass().getResource("/screen/mainMenu.fxml"));
 		 Scene scene = new Scene(root);
 		 stage.setScene(scene);
-		 System.out.println("mainMenud.fxml opened");
+		 System.out.println("/screen/mainMenu.fxml opened");
 	 }
-
+	 
+	 @FXML
+	 private void openRpgStory() throws IOException{
+		 stage = (Stage) rpgBtn.getScene().getWindow();
+		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/rpgStory/StorySections.fxml"));
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 System.out.println("StorySections.fxml opened");
+		 
+	 }
 }
