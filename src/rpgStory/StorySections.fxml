@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Story.Sections">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rpgStory.Sections">
    <children>
       <BorderPane layoutX="-19.0" layoutY="-7.0" prefHeight="531.0" prefWidth="838.0">
          <bottom>
@@ -24,7 +24,7 @@
                         <Insets />
                      </opaqueInsets>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 2: The Real Beginning">
+                  <Button fx:id="battleBtn" mnemonicParsing="false" onAction="#openRpgBattle" prefHeight="48.0" prefWidth="332.0" text="Section 2: The Real Beginning">
                      <font>
                         <Font size="21.0" />
                      </font>

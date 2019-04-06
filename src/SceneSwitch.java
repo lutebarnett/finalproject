@@ -49,21 +49,19 @@ public class SceneSwitch implements Initializable{
 	 private void openMainmenu() throws IOException{
 		 stage = (Stage) testBtn.getScene().getWindow();
 		 Pane root;
-		 root = (Pane) FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+		 root = (Pane) FXMLLoader.load(getClass().getResource("/screen/mainMenu.fxml"));
 		 Scene scene = new Scene(root);
 		 stage.setScene(scene);
-		 System.out.println("mainMenud.fxml opened");
+		 System.out.println("/screen/mainMenu.fxml opened");
 	 }
 	 
 	 @FXML
 	 private void openRpgStory() throws IOException{
 		 stage = (Stage) rpgBtn.getScene().getWindow();
-		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/Story/StorySections.fxml"));
+		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/rpgStory/StorySections.fxml"));
 		 Scene scene = new Scene(root);
 		 stage.setScene(scene);
 		 System.out.println("StorySections.fxml opened");
 		 
-		 
 	 }
-
 }

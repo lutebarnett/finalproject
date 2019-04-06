@@ -17,7 +17,7 @@ public class PlayerScreen extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		
 		 try {
-			 Pane root = (Pane)FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+			 Pane root = (Pane)FXMLLoader.load(getClass().getResource("/screen/mainMenu.fxml"));
 			 Scene scene = new Scene(root);
 			 primaryStage.setScene(scene);
 			 primaryStage.setTitle("Menu");

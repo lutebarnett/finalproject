@@ -1,4 +1,4 @@
-package player;
+package screen;
 
 import javax.swing.JOptionPane;
 
