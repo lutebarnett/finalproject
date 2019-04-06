@@ -1,5 +1,36 @@
 # Progress Updates 
-## Week 2 (March 29 - April 5)
+
+## Week 4 (April 5 - April 12)
+
+### What did your team do last week?
+* We managed to find a way to switch scenes from a main menu to something like a game
+* The RPG part is coming along nicely as a fight mechanic has been achieved
+	- Furthermore, more classes and subclasses of characters were created
+	- A GUI for the RPG fights was created
+	- The original idea for a large variety of enemies was scrapped in favor of merely 3 different ones: Minion, Miniboss, Final Boss
+		- Must try to create unique names
+			- Or make them all generic just for fun
+* The base of what will be the RPG section/Story mode was created
+	- There will be buttons that represents sections within the game
+		- There will only be 4 sections, each with a different fight
+
+### What will you do this week?
+* Try to finish the game complete by doing the following:
+	- Finish creating the minesweeper game
+	- Create a coherent story
+	- Create a continuous save file
+	- Fully finish the RPG fights by allowing interchangeable Characters/Enemies
+* Maybe make the game a little colorful/not completely black and white
+
+### Any blocking issues/challenges need to be addressed?
+* We may have found a way to make the game scenes changeable but we are not completely experienced with implementing this part
+	- We also need each individual FXML file to have different javafx classes that give each scene more unique mechanics
+* Group member James will no longer be helping us as he had apparently dropped the class
+	- Though this is not that big of a deal considering he contributed literally nothing so far
+* Creating jokes for the RPG Story
+	- Also creating more unique dialogue for enemies in RPG fight
+
+## Week 3 (March 29 - April 5)
 
 ### What did your team do last week?
 * We created an RPGScreen that allows the user to battle against an enemy
@@ -20,6 +51,9 @@
 	  by itself when the window pops up
 * We need a better way to talk to our newest group member, James
 	- And better coordination when it comes to meeting up and working on the project
+
+
+
 
 ## Week 2 (March 22 - March 29)
 
