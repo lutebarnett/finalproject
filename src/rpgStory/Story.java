@@ -9,20 +9,21 @@ package rpgStory;
 
 
 public class Story {
-	
+
 	public String beginning() {
 		
-		return "";
+		return "The hero. The one who will bring peace to this land. He will fight the ultimate evil to change the world... except you that hero and the entire "
+				+ "area is covered in mines. Welp, gotta start digging I guess.";
 	}
 	
 	public String firstBattle() {
 		
-		return "";
+		return "Man, this took so long. Maybe I can finally start fighin- HEY THERE IS ALREADY A VICTU- I mean ENEMY.";
 	}
 	
 	public String secondBattle() {
 		
-		return "";
+		return "Huh, these mines are actually useful.";
 	}
 	
 	public String finalBattle() {
@@ -34,5 +35,4 @@ public class Story {
 		
 		return "";
 	}
-
 }

@@ -3,13 +3,15 @@ package battle;
 public class DemonLord extends Enemy {
 	
 	public DemonLord(){
-		super(100000, 3000, "Itmic Algor");
+		super(100000, 100, "Itmic Algor");
 	}
 	
+	@Override
 	public String description() {
 		return "The monster who desire's the world's end! The leader of all demons! THE DEMON LORD!!!";
 	}
 	
+	@Override
 	public Action randomActions() {
 		StringBuilder s = new StringBuilder();
 		int damage;

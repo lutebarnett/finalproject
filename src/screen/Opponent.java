@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import battle.DemonLord;
 import battle.Enemy;
+import battle.General;
 import battle.Minion;
 
 public class Opponent {
@@ -12,10 +13,16 @@ public class Opponent {
 	private Enemy e;
 	
 	public Opponent() {
+		
 		try {
-			Scanner input = new Scanner(new File("src/screen/BattleDecision.txt"));
-			if(input.nextInt() == 1) {
+			Scanner input = new Scanner(new File("src/BattleDecision.txt"));
+			int choice = input.nextInt();
+			if(choice == 1) {
 				e = new Minion();
+			} else if (choice == 2){
+				e = new General();
+			} else if (choice == 3){
+				e = new DemonLord();
 			} else {
 				e = new Minion();
 			}

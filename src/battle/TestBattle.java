@@ -1,11 +1,82 @@
 package battle;
 
-public class TestBattle {
-	public static void main(String[] args) {
-		
-		for(int i = 0; i < 50; i++) {
-			int random = (int) (Math.random() * 9);
+import java.util.ResourceBundle;
 
-			System.out.println(random);
-	}}
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+
+public class TestBattle  extends Application implements Initializable{
+	
+	@FXML
+	Text test;
+	
+	@FXML
+	Button btn;
+	
+	
+	public static void main(String[] args) {
+		StringBuilder s = new StringBuilder("HELLO EVERYONE");
+				
+		for(int i = 0; i <= s.toString().length(); i++) {
+			System.out.println(s.toString().substring(0, i));
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		launch(args);
+	}
+	
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		final FXMLLoader root = new FXMLLoader(getClass().getResource("/battle/ScreenTest.fxml"));
+		Pane p = root.load();
+		
+		Scene scene = new Scene(p);
+		primaryStage.setTitle("MyExampleApp");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+	
+	
+	@Override
+	public void initialize(java.net.URL location, ResourceBundle resources) {
+		btn.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				StringBuilder s = new StringBuilder("HELLO EVERYONE");
+				
+				test.setText(s.toString());
+				
+				for(int i = 0; i <= s.toString().length(); i++) {
+					test.setText(s.toString().substring(0, 0));
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				
+			}		
+		});
+	}
+	
 }
+
+	
+
+	
+

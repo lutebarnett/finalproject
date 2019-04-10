@@ -52,8 +52,8 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button fx:id="nextGame" mnemonicParsing="false" text="Start New Game" />
-            <Button fx:id="returnMenu" mnemonicParsing="false" text="Return to Main Menu" />
+            <Button fx:id="nextGame" mnemonicParsing="false" onAction="#returnSection" text="Start New Game" />
+            <Button fx:id="returnMenu" mnemonicParsing="false" onAction="#returnMainMenu" text="Return to Main Menu" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
                   <Button fx:id="attack" mnemonicParsing="false" onAction="#attack" text="Attack" />
