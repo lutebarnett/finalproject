@@ -118,7 +118,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffcc00" height="20.0" layoutX="23.0" layoutY="315.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9933" height="20.0" layoutX="23.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99ccff" height="20.0" layoutX="23.0" layoutY="415.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#660066" height="20.0" layoutX="23.0" layoutY="465.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0033ff" height="20.0" layoutX="23.0" layoutY="465.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="20.0" layoutX="609.0" layoutY="265.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKRED" height="20.0" layoutX="609.0" layoutY="315.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
       <Text layoutX="2.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color Code:" />
@@ -137,13 +137,15 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="53.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
-      <Text layoutX="53.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
-      <Text layoutX="53.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
-      <Text layoutX="53.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
-      <Text layoutX="53.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
-      <Text layoutX="53.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
-      <Text layoutX="53.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
-      <Text layoutX="53.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+      <Text layoutX="53.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Text layoutX="53.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="53.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="53.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="53.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="53.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="53.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+      <Text layoutX="53.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#660066" height="20.0" layoutX="23.0" layoutY="515.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Text layoutX="53.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
    </children>
 </Pane>
