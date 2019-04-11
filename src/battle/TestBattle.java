@@ -24,8 +24,6 @@ public class TestBattle  extends Application implements Initializable{
 	@FXML
 	Button btn;
 	
-	
-	
 	public static void main(String[] args) {
 		launch(args);
 	}
