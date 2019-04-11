@@ -191,7 +191,13 @@ public class SceneSwitch implements Initializable{
 				}
 			}
 			
-			
+			try (PrintWriter fout = new PrintWriter(new File("src/Unlocked.txt"));) {
+				fout.printf("%d", 2);
+				
+				
+			}catch(FileNotFoundException ex) {
+				
+			}
 		}
 		
 		@FXML
