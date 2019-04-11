@@ -1,5 +1,6 @@
 package battle;
 
+import java.awt.Color;
 import java.util.ResourceBundle;
 
 
@@ -25,17 +26,8 @@ public class TestBattle  extends Application implements Initializable{
 	Button btn;
 	
 	
+	
 	public static void main(String[] args) {
-		StringBuilder s = new StringBuilder("HELLO EVERYONE");
-				
-		for(int i = 0; i <= s.toString().length(); i++) {
-			System.out.println(s.toString().substring(0, i));
-			try {
-				Thread.sleep(200);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
 		launch(args);
 	}
 	
@@ -43,8 +35,9 @@ public class TestBattle  extends Application implements Initializable{
 	public void start(Stage primaryStage) throws Exception {
 		final FXMLLoader root = new FXMLLoader(getClass().getResource("/battle/ScreenTest.fxml"));
 		Pane p = root.load();
-		
+
 		Scene scene = new Scene(p);
+		scene.setFill(javafx.scene.paint.Color.RED);
 		primaryStage.setTitle("MyExampleApp");
 		primaryStage.setScene(scene);
 		primaryStage.show();
@@ -58,13 +51,11 @@ public class TestBattle  extends Application implements Initializable{
 			@Override
 			public void handle(ActionEvent arg0) {
 				StringBuilder s = new StringBuilder("HELLO EVERYONE");
-				
-				test.setText(s.toString());
-				
+								
 				for(int i = 0; i <= s.toString().length(); i++) {
-					test.setText(s.toString().substring(0, 0));
+					String a = s.toString().substring(0, i);
 					try {
-						Thread.sleep(100);
+						wait(100);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}

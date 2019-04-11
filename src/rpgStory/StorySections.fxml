@@ -11,7 +11,7 @@
    <children>
       <BorderPane layoutX="-19.0" layoutY="-7.0" prefHeight="531.0" prefWidth="838.0">
          <bottom>
-            <VBox alignment="TOP_CENTER" prefHeight="531.0" prefWidth="846.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" prefHeight="531.0" prefWidth="846.0" spacing="30.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
                <opaqueInsets>
                   <Insets bottom="10.0" />
                </opaqueInsets>
@@ -45,6 +45,7 @@
                         <Insets />
                      </VBox.margin>
                   </Button>
+                  <Button fx:id="goBack" mnemonicParsing="false" onAction="#mainMenuReturn" text="Return to Main Menu" />
                </children>
                <padding>
                   <Insets top="70.0" />

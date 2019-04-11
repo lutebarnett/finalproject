@@ -158,15 +158,13 @@ public class RPGScreen extends Opponent implements Initializable{
 		Run.setVisible(false);
 		enemyActions.setVisible(false);
 		
-		try(
-			PrintWriter fout = new PrintWriter(new File("src/Unlocked.txt"));
-			Scanner fin = new Scanner(new File("src/BattleDecision.txt"));
-			) {
-			
+		try (PrintWriter fout = new PrintWriter(new File("src/Unlocked.txt"));
+			 Scanner fin = new Scanner(new File("src/BattleDecision.txt"));
+			 ) {
 			fout.printf("%d", fin.nextInt() + 2);
-			
-		} catch(FileNotFoundException ex) {
-			
+
+		} catch (FileNotFoundException ex) {
+
 		}
 	}
 	

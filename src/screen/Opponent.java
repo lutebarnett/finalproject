@@ -11,12 +11,13 @@ import battle.Minion;
 public class Opponent {
 	
 	private Enemy e;
-	
+	private int choice;
 	public Opponent() {
 		
 		try {
 			Scanner input = new Scanner(new File("src/BattleDecision.txt"));
-			int choice = input.nextInt();
+			choice = input.nextInt();
+			
 			if(choice == 1) {
 				e = new Minion();
 			} else if (choice == 2){
@@ -36,6 +37,10 @@ public class Opponent {
 	
 	public Enemy getOpponent() {
 		return e;
+	}
+	
+	public int num() {
+		return choice;
 	}
 
 }

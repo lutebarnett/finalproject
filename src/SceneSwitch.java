@@ -18,9 +18,7 @@ public class SceneSwitch implements Initializable{
 	Button testBtn;
 	@FXML 
 	Button quitBtn;
-	@FXML
-	Button rpgBtn;
-	
+		
 	private Stage stage;
 	
 	@Override
@@ -57,7 +55,7 @@ public class SceneSwitch implements Initializable{
 	 
 	 @FXML
 	 private void openRpgStory() throws IOException{
-		 stage = (Stage) rpgBtn.getScene().getWindow();
+		 stage = (Stage) startBtn.getScene().getWindow();
 		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/rpgStory/StorySections.fxml"));
 		 Scene scene = new Scene(root);
 		 stage.setScene(scene);

@@ -28,11 +28,11 @@ public class Story {
 	
 	public String finalBattle() {
 		
-		return "";
+		return "Okay, a hundred more mooks to go and WHY IS THE FINAL BOSS already here";
 	}
 	
 	public String Epilogue() {
 		
-		return "";
+		return "YES, VICTORY! The work is saved! huh. what do you mean it's not over. WHAT DO YOU MEAN THE JOURNEY's just begun! \n\n\n\n TO BE CONTINUED";
 	}
 }
