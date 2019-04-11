@@ -1,6 +1,5 @@
 package battle;
 
-import java.awt.Color;
 import java.util.ResourceBundle;
 
 
