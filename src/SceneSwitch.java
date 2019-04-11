@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+import battle.PlayerData;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -191,10 +192,10 @@ public class SceneSwitch implements Initializable{
 				}
 			}
 			
-			try (PrintWriter fout = new PrintWriter(new File("src/Unlocked.txt"));) {
+			try (PrintWriter fout = new PrintWriter(new File("src/Unlocked.txt"));
+				 PrintWriter fout2 = new PrintWriter(new File("src/NumberOfMines.txt")); ) {
 				fout.printf("%d", 2);
-				
-				
+				fout2.printf("%d", 10);
 			}catch(FileNotFoundException ex) {
 				
 			}
