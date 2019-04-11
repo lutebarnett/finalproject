@@ -8,38 +8,40 @@
 
 package tiles;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
 public class Tile {
 	
-	private int length;
-	private int width;
+	private int posX;
+	private int posY;
 	private boolean flagged = false;
 	private boolean unknown = true;
 	
-	public Tile(int length, int width) {
-		this.length = length;
-		this.width = width;
+	public Tile(int posX, int posY) {
+		this.posX = posX;
+		this.posY = posY;
 	}
 	
 	public Tile() {
-		this(0, 0);
+		this(10, 10);
 	}
 	
 	/**
 	 * returns value of the private int length of the object
 	 * @return returns the location of the tile length only
 	 */	
-	public int getLength() {
-		return length;
+	public int getX() {
+		return posX;
 	}
 	
 	/**
 	 * returns value of the private int width of the object
 	 * @return returns the location of the tile Width only
 	 */	
-	public int getWidth() {
-		return width;
+	public int getY() {
+		return posY;
 	}
-	
 	/**
 	 * returns whether or not something was flagged
 	 * @return returns the boolean flagged which represents whechter or not something was flagged
@@ -47,7 +49,6 @@ public class Tile {
 	public boolean getFlag() {
 		return flagged;
 	}
-	
 	/**
 	 * sets whether or not something was flagged
 	 * sets the flagged boolean to a or whatever the person decides to put the boolean as
@@ -63,7 +64,9 @@ public class Tile {
 	public void revealUnknown() {
 		unknown = false;
 	}
-	
+	public int nearbyMines(Tile[][] tiles) {
+		return -2;
+	}
 	
 	
 }
