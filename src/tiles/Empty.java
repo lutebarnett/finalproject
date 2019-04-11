@@ -1,5 +1,6 @@
 package tiles;
 
+
 public class Empty extends Tile{
 	
 	public Empty(int x, int y) {
@@ -7,31 +8,150 @@ public class Empty extends Tile{
 	}
 	
 	//will define later
+	@Override
 	public int nearbyMines(Tile[][] tiles) {
 		int amount = 0; 
-
-		for (int i = getLength() - 1; i <= getLength() + 1; i++) {
-			if (i < 0) {
-				i = 0;
+		
+		if(this.getX()==0&&this.getY()==0) {
+			if(tiles[this.getX()+1][this.getY()+1] instanceof Mine) {
+				amount++;
 			}
-
-			for (int count = getWidth() - 1; count <= getWidth() + 1; count++) {
-				if(count < 0) {
-					count++;
-				}
-				
-				if(count == getWidth() && i == getLength()) {
-					count++;
-				}
-
-				if (count < tiles[0].length && i < tiles.length) {
-					if (tiles[i][count] instanceof Mine) {
-						amount++;
-					}
-				}
+			if(tiles[this.getX()][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+		}
+		else if(this.getX()==9&&this.getY()==9) {
+			if(tiles[this.getX()-1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+		}
+		else if(this.getX()==9&&this.getY()==0) {
+			if(tiles[this.getX()-1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+		}
+		else if(this.getX()==0&&this.getY()==9) {
+			if(tiles[this.getX()][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()] instanceof Mine) {
+				amount++;
 			}
 		}
 		
+		
+		else if(this.getX()==0) {
+			if(tiles[this.getX()][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+		}
+		else if(this.getY()==0) {
+			if(tiles[this.getX()-1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+		}
+		else if(this.getX()==9) {
+			if(tiles[this.getX()][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+		}
+		else if(this.getY()==9) {
+			if(tiles[this.getX()-1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+		}
+		else {
+			if(tiles[this.getX()-1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()+1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()-1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+			if(tiles[this.getX()+1][this.getY()-1] instanceof Mine) {
+				amount++;
+			}
+		}
 		
 		return amount;
 	}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneSwitch">
+   <children>
+      <Text fx:id="mineN" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mines: " />
+      <Button fx:id="gameBtn" layoutX="312.0" layoutY="10.0" mnemonicParsing="false" onAction="#setUp" text="Start Game" />
+      <Button fx:id="mmBtn" layoutX="609.0" layoutY="19.0" mnemonicParsing="false" onAction="#openMainmenu" text="Main Menu" />
+      <Rectangle fx:id="tile00" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile01" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile10" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile11" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile20" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile21" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile30" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile31" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile02" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile03" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile13" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile12" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile22" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile23" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile33" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile32" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile04" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile05" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile14" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile15" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile24" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile34" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile35" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile06" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile07" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile17" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile16" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile26" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile27" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile37" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile36" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile40" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile41" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile50" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile51" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile60" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile70" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile71" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile42" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile43" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile53" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile52" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile62" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile63" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile73" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile72" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile44" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile45" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile54" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile55" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile64" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile74" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile75" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile46" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile47" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile57" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile56" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile66" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile67" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile77" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile76" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile65" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile25" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile61" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile80" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile81" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile83" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile82" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile84" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile85" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile87" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile86" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile90" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="100.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile91" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="150.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile93" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="250.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile92" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="200.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile94" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="300.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile95" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="350.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile97" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="450.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile96" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="400.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile08" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile18" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile28" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile38" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile48" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile58" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile68" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile78" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile88" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile98" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="500.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile09" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile19" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile29" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile39" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile49" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile59" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile69" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile79" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile89" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="tile99" arcHeight="5.0" arcWidth="5.0" fill="#c8c8c8" height="50.0" layoutX="550.0" layoutY="500.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+   </children>
+</Pane>

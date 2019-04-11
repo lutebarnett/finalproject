@@ -16,7 +16,7 @@
                   <Insets bottom="10.0" />
                </opaqueInsets>
                <children>
-                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#printing" prefHeight="48.0" prefWidth="332.0" text="Section 1: Bad Delays">
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#openMinesweeper" prefHeight="48.0" prefWidth="332.0" text="Section 1: Bad Delays">
                      <font>
                         <Font size="21.0" />
                      </font>

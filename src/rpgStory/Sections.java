@@ -68,8 +68,22 @@ public class Sections implements Initializable {
 			}
 	}
 	
-	public void printing() {
-		System.out.println("hi");
+	@FXML
+	private void openMinesweeper() throws IOException{
+		try (
+			 PrintWriter fin = new PrintWriter(new File("src/BattleDecision.txt"));
+			) {
+			fin.printf("%d", 0);
+		}catch(FileNotFoundException ex) {
+			
+		}
+		
+		
+		stage = (Stage) battleBtn.getScene().getWindow();
+		Pane root = (Pane) FXMLLoader.load(getClass().getResource("/screen/minefield.fxml"));
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		System.out.println("minefield.fxml opened");
 	}
 	
 	@FXML
