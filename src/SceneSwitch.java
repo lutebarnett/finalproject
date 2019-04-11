@@ -1,4 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -18,6 +21,8 @@ public class SceneSwitch implements Initializable{
 	Button testBtn;
 	@FXML 
 	Button quitBtn;
+	@FXML
+	Button newGame;
 		
 	private Stage stage;
 	
@@ -61,5 +66,20 @@ public class SceneSwitch implements Initializable{
 		 stage.setScene(scene);
 		 System.out.println("StorySections.fxml opened");
 		 
+	 }
+	 
+	 @FXML
+	 private void setNewGame() throws IOException {
+		 try(PrintWriter change = new PrintWriter(new File("src/Max.txt"));
+			 PrintWriter change2 = new PrintWriter(new File("src/Unlocked.txt"));
+			 ){
+			 change.printf("%d", 1);
+			 change2.printf("%d", 1);
+			 
+			 newGame.setVisible(false);
+			 
+		 } catch (FileNotFoundException ex) {
+			
+		}
 	 }
 }
