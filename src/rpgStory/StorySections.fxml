@@ -11,7 +11,7 @@
    <children>
       <BorderPane layoutX="-19.0" layoutY="-7.0" prefHeight="531.0" prefWidth="838.0">
          <bottom>
-            <VBox alignment="TOP_CENTER" prefHeight="531.0" prefWidth="846.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" prefHeight="531.0" prefWidth="846.0" spacing="30.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
                <opaqueInsets>
                   <Insets bottom="10.0" />
                </opaqueInsets>
@@ -32,12 +32,12 @@
                         <Insets />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 3: Too Easy">
+                  <Button fx:id="battleBtn2" mnemonicParsing="false" onAction="#openRpgBattle2" prefHeight="48.0" prefWidth="332.0" text="Section 3: Too Easy">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="332.0" text="Section 4: Final Battle Already?">
+                  <Button fx:id="battleBtn3" mnemonicParsing="false" onAction="#openRpgBattle3" prefHeight="48.0" prefWidth="332.0" text="Section 4: Final Battle Already?">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -45,6 +45,7 @@
                         <Insets />
                      </VBox.margin>
                   </Button>
+                  <Button fx:id="goBack" mnemonicParsing="false" onAction="#mainMenuReturn" text="Return to Main Menu" />
                </children>
                <padding>
                   <Insets top="70.0" />

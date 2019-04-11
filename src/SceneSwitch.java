@@ -1,4 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -19,8 +22,8 @@ public class SceneSwitch implements Initializable{
 	@FXML 
 	Button quitBtn;
 	@FXML
-	Button rpgBtn;
-	
+	Button newGame;
+		
 	private Stage stage;
 	
 	@Override
@@ -57,11 +60,26 @@ public class SceneSwitch implements Initializable{
 	 
 	 @FXML
 	 private void openRpgStory() throws IOException{
-		 stage = (Stage) rpgBtn.getScene().getWindow();
+		 stage = (Stage) startBtn.getScene().getWindow();
 		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/rpgStory/StorySections.fxml"));
 		 Scene scene = new Scene(root);
 		 stage.setScene(scene);
 		 System.out.println("StorySections.fxml opened");
 		 
+	 }
+	 
+	 @FXML
+	 private void setNewGame() throws IOException {
+		 try(PrintWriter change = new PrintWriter(new File("src/Max.txt"));
+			 PrintWriter change2 = new PrintWriter(new File("src/Unlocked.txt"));
+			 ){
+			 change.printf("%d", 1);
+			 change2.printf("%d", 1);
+			 
+			 newGame.setVisible(false);
+			 
+		 } catch (FileNotFoundException ex) {
+			
+		}
 	 }
 }

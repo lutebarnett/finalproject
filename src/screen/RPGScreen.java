@@ -1,16 +1,25 @@
 package screen;
 
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 import battle.*;
 import battle.Character;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class RPGScreen extends Opponent implements Initializable{
 	
@@ -45,8 +54,8 @@ public class RPGScreen extends Opponent implements Initializable{
 	Button nextGame;
 	
 	Opponent e = new Opponent();
-	
 	PlayerData controller = new PlayerData(200, 20, "Player");
+	private Stage stage;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {		
@@ -102,20 +111,19 @@ public class RPGScreen extends Opponent implements Initializable{
 		enemyReaction();
 		fight();
 			
-	}
-		
+	}	
 		
 	@FXML	
 	public void run() {
 		JOptionPane.showMessageDialog(null, "You have run away!");
 		playerActions.setText("You have run away!");
 		endBattle();
-	}
-		
+		returnMenu.setVisible(true);
+	}	
 	
 	@FXML
 	public void fight() {
-		if(e.getOpponent().getHealth() == 0) {
+		if(e.getOpponent().getHealth() <= 0) {
 			enemyActions.setText("The enemy has surcome to their wounds! They have died!");
 			JOptionPane.showMessageDialog(null, "The battle has ended. YOU WON!");
 			playerActions.setText("You have won!");
@@ -131,7 +139,16 @@ public class RPGScreen extends Opponent implements Initializable{
 			endBattle();
 			returnMenu.setVisible(true);
 		}
-		
+	}
+	
+	@FXML
+	private void openMainmenu() throws IOException{
+		stage = (Stage) returnMenu.getScene().getWindow();
+		Pane root;
+		root = (Pane) FXMLLoader.load(getClass().getResource("/screen/mainMenu.fxml"));
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		System.out.println("/screen/mainMenu.fxml opened");
 	}
 	
 	public void endBattle() {
@@ -140,6 +157,15 @@ public class RPGScreen extends Opponent implements Initializable{
 		Heal.setVisible(false);
 		Run.setVisible(false);
 		enemyActions.setVisible(false);
+		
+		try (PrintWriter fout = new PrintWriter(new File("src/Unlocked.txt"));
+			 Scanner fin = new Scanner(new File("src/BattleDecision.txt"));
+			 ) {
+			fout.printf("%d", fin.nextInt() + 2);
+
+		} catch (FileNotFoundException ex) {
+
+		}
 	}
 	
 	public void enemyReaction() {
@@ -168,5 +194,25 @@ public class RPGScreen extends Opponent implements Initializable{
 		s.append("]");
 		
 		return s;
+	}
+	
+	@FXML
+	private void returnMainMenu() throws IOException{
+		 stage = (Stage) returnMenu.getScene().getWindow();
+		 Pane root;
+		 root = (Pane) FXMLLoader.load(getClass().getResource("/screen/mainMenu.fxml"));
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 System.out.println("/screen/mainMenu.fxml opened");
+	}
+	
+	@FXML
+	private void returnSection() throws IOException{
+		 stage = (Stage) nextGame.getScene().getWindow();
+		 Pane root = (Pane) FXMLLoader.load(getClass().getResource("/rpgStory/StorySections.fxml"));
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 System.out.println("StorySections.fxml opened");
+		 
 	}
 }

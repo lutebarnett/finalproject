@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screen.RPGScreen">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="693.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screen.RPGScreen">
    <top>
       <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -26,21 +26,24 @@
       </VBox>
    </top>
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="50.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
-            <Text fx:id="playerActions" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Actions" />
             <Text fx:id="enemyActions" strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy Actions" />
+            <Text fx:id="playerActions" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Actions" />
          </children>
          <padding>
-            <Insets left="10.0" top="30.0" />
+            <Insets left="10.0" top="20.0" />
          </padding>
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </VBox>
    </left>
    <bottom>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <Text fx:id="player" strokeType="OUTSIDE" strokeWidth="0.0" text="Player">
                <font>
@@ -52,8 +55,8 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button fx:id="nextGame" mnemonicParsing="false" text="Start New Game" />
-            <Button fx:id="returnMenu" mnemonicParsing="false" text="Return to Main Menu" />
+            <Button fx:id="nextGame" mnemonicParsing="false" onAction="#returnSection" text="Start New Game" />
+            <Button fx:id="returnMenu" mnemonicParsing="false" onAction="#returnMainMenu" text="Return to Main Menu" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
                   <Button fx:id="attack" mnemonicParsing="false" onAction="#attack" text="Attack" />
