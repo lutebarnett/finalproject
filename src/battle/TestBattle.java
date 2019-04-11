@@ -49,16 +49,8 @@ public class TestBattle  extends Application implements Initializable{
 
 			@Override
 			public void handle(ActionEvent arg0) {
-				StringBuilder s = new StringBuilder("HELLO EVERYONE");
 								
-				for(int i = 0; i <= s.toString().length(); i++) {
-					String a = s.toString().substring(0, i);
-					try {
-						wait(100);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
+				
 				
 			}		
 		});
