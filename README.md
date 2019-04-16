@@ -4,20 +4,19 @@
 
 ## **Project Description**
 
-Creating a minesweeper but with a STORY!!!
+Creating a minesweeper but with elements from the RPG game genre.
 
 ### **What?**
 
-The classic minesweeper but combined with an RPG! Story: You are a hero and you are trying to beat the final boss but the boss has put mines everywhere. Take out the mines to make it to the final enemy. Small simple fight at the end. 
+The classic minesweeper but combined with an RPG! Story: You are a hero and you are trying to beat the final boss but the boss has put mines everywhere. Take out the mines to make it to the enemies. There will be simple RPG fights that involve the use of bombs. 
 
 ### **Why?**
 
-We are reviving the single player experience but we decided to make the game more interesting so now there is a story. This is done by combining two different types of games, the classic minesweeper game and the RPG genre.
-By combining two different games, this creates a brand new experience. WE give the player greater satisfaction by combining the core elements of both a minesweeper game and a RPG game.
+We are reviving the single player experience but we decided to make the game more interesting so now there is a story. This is done by combining two different types of games, the classic minesweeper game and the RPG genre. By combining two different games, this creates a brand new experience. WE give the player greater satisfaction by combining the core elements of both a minesweeper game and a RPG game.
 
 ### **How?**
 
-We will make an program that randomizes where the bombs are going to be and the player will have to pick a certain spot to either mark a bomb or clear a tile without the bomb. There will be some random text that tells a story but that is it. There will also be numbers that clue as a clue for the player to know which tile is a bomb. There is also just a random rpg style fight in the end. We will create a GUI that represents the screen with buttons that represent each tile.
+We will make an program that randomizes where the bombs are going to be and the player will have to pick a certain spot to either mark a bomb or clear a tile without the bomb. There will also be numbers that clue as a clue for the player to know which tile is a bomb. There is also just a random rpg style fight in the end. We will create a GUI that represents the screen with buttons that represent each tile. There will be two menus. The first is the main menu where you can start a new game, start the current game, or just quit. The second menu is where the various parts of the game can be activated. For example, the minesweeper game activates with one button and the RPG games activate with another button. This menu will not have all the buttons immediately and the player will need to complete the previous game before moving onto the next game. Progress is saved and the player and go back to other games as much as they want. Finally, there will be an rpg screen that shows the battle between a player and an enemy that the player chooses. This battle will have multiple buttons that represent various actions such as healing, attacking, running, and throwing bombs. Furthermore, there will be text descriptions of actions as well as bars that represent players health. 
 
 ---
 
@@ -50,17 +49,19 @@ We will make an program that randomizes where the bombs are going to be and the 
 ### **Install**
 1. Login your github account. If you do not have one, then create a new account
 2. Create a copy of this repository by forking this project. This can be done by clicking the fork button on the upper right part of this page. 
-3. After copying this repository into your Github. This finalproject should be within your repository
+3. After copying this repository, go to your cloned version
+4. Click the green button called "clone or download". A link will be given as a result
+5. This copy this link and clone the git repository into your computer 
+6. After copying this repository into your Github. This finalproject should be within your repository. This can be done using the command prompt.
+	- When using the command prompt, make sure you know what folder the cloned repository will be in
 
 ### **Run**
-1. Go into eclipse
-2. Change the git workspace into the folder
-3. Click the green button called "clone or download". A link will be given as a result.
-4. This copy this link and clone the git repository into your computer
-5. Run eclipse
-6. Shift the eclipse workspace to the folder where the clone is
-7. Run said code afterwards. A window should pop up with the title "MineSweeper the RPG" at the top. This is where the game is run.
-8. If this is the first game or you wan to restart, click the New Game button at the bottom of the scene.
+1. Go into eclipse and run the program.
+2. Make sure to change the git workspace into the folder where the cloned repository should be in
+3. Run the copied program in eclipse
+4. Shift the eclipse workspace to the folder where the clone is
+5. Run said code afterwards. A window should pop up with the title "MineSweeper the RPG" at the top. This is where the game is run.
+6. If this is the first game or you wan to restart, click the New Game button at the bottom of the scene.
 
 ---
 
@@ -72,7 +73,7 @@ We will make an program that randomizes where the bombs are going to be and the 
 ---
 ## Demo Video
 
-youtube link here: 
+Youtube link here: 
 
 ---
 ## **Team Members**
