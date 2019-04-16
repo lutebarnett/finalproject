@@ -84,6 +84,6 @@ Youtube link here:
 ---
 ## **Team Members**
 ### - Lute B., Minesweeper Producer, Debugger
-	
+
 ### - John Li, RPG Producer, Team Coordinator
 
