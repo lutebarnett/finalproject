@@ -12,7 +12,8 @@ The classic minesweeper but combined with an RPG! Story: You are a hero and you 
 
 ### **Why?**
 
-We are reviving the single player experience but we decied to make the game more interesting so now there is a story.
+We are reviving the single player experience but we decided to make the game more interesting so now there is a story. This is done by combining two different types of games, the classic minesweeper game and the RPG genre.
+By combining two different games, this creates a brand new experience. WE give the player greater satisfaction by combining the core elements of both a minesweeper game and a RPG game.
 
 ### **How?**
 
