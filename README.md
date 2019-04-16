@@ -71,5 +71,5 @@ We will make an program that randomizes where the bombs are going to be and the 
 ## **Team Members**
 ### - Lute B., Minesweeper producer, debugger
 	
-### - John Li, RPG producer, coder, coordinator
+### - John Li, RPG producer, coordinator
 
