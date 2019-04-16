@@ -43,6 +43,11 @@ We will make an program that randomizes where the bombs are going to be and the 
 - Perfect story
 - Perfect code
 
+4. March 29, 2019 - April 5, 2019
+- Clean up any other problems
+- Finish important parts of the code that need to be finished
+- Integrate both sections of the code together to form a more cohesive game. 
+
 ---
 
 ## **Getting Started**
@@ -71,6 +76,7 @@ We will make an program that randomizes where the bombs are going to be and the 
 3. RPG battle using the screen
 
 ---
+
 ## Demo Video
 
 Youtube link here: 
@@ -78,6 +84,6 @@ Youtube link here:
 ---
 ## **Team Members**
 ### - Lute B., Minesweeper Producer, Debugger
-	
+
 ### - John Li, RPG Producer, Team Coordinator
 
