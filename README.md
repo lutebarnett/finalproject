@@ -8,17 +8,15 @@ Creating a minesweeper but with elements from the RPG game genre.
 
 ### **What?**
 
-The classic minesweeper but combined with an RPG! Story: You are a hero and you are trying to beat the final boss but the boss has put mines everywhere. Take out the mines to make it to the final enemy. Small simple fight at the end. 
+The classic minesweeper but combined with an RPG! Story: You are a hero and you are trying to beat the final boss but the boss has put mines everywhere. Take out the mines to make it to the enemies. There will be simple RPG fights that involve the use of bombs. 
 
 ### **Why?**
 
-We are reviving the single player experience but we decided to make the game more interesting so now there is a story. This is done by combining two different types of games, the classic minesweeper game and the RPG genre.
-By combining two different games, this creates a brand new experience. WE give the player greater satisfaction by combining the core elements of both a minesweeper game and a RPG game.
+We are reviving the single player experience but we decided to make the game more interesting so now there is a story. This is done by combining two different types of games, the classic minesweeper game and the RPG genre. By combining two different games, this creates a brand new experience. WE give the player greater satisfaction by combining the core elements of both a minesweeper game and a RPG game.
 
 ### **How?**
 
-We will make an program that randomizes where the bombs are going to be and the player will have to pick a certain spot to either mark a bomb or clear a tile without the bomb. There will be some random text that tells a story but that is it. There will also be numbers that clue as a clue for the player to know which tile is a bomb. There is also just a random rpg style fight in the end. We will create a GUI that represents the screen with buttons that represent each tile. There will be two menus. The first is the main menu where you can start a new game, start the current game, or just quit. The second menu is where the various parts of the game can be 
-played. For example, the minesweeper game activates with one button and the RPG games activate with another button. 
+We will make an program that randomizes where the bombs are going to be and the player will have to pick a certain spot to either mark a bomb or clear a tile without the bomb. There will also be numbers that clue as a clue for the player to know which tile is a bomb. There is also just a random rpg style fight in the end. We will create a GUI that represents the screen with buttons that represent each tile. There will be two menus. The first is the main menu where you can start a new game, start the current game, or just quit. The second menu is where the various parts of the game can be activated. For example, the minesweeper game activates with one button and the RPG games activate with another button. Finally, there will be an rpg screen that shows the battle between a player and an enemy that the player chooses. This battle will have multiple buttons that represent various actions such as healing, attacking, running, and throwing bombs. Furthermore, there will be text descriptions of actions as well as bars that represent players health. 
 
 ---
 
@@ -75,7 +73,7 @@ played. For example, the minesweeper game activates with one button and the RPG 
 ---
 ## Demo Video
 
-youtube link here: 
+Youtube link here: 
 
 ---
 ## **Team Members**
