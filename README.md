@@ -65,7 +65,7 @@ We will make an program that randomizes where the bombs are going to be and the 
 2. Make sure to change the git workspace into the folder where the cloned repository should be in
 3. Run the copied program in eclipse
 4. Shift the eclipse workspace to the folder where the clone is
-5. Run said code afterwards. A window should pop up with the title "MineSweeper the RPG" at the top. This is where the game is run.
+5. Run "PlayerScreen.java". A window should pop up with the title "MineSweeper the RPG" at the top. This is where the game is run.
 6. If this is the first game or you wan to restart, click the New Game button at the bottom of the scene.
 
 ---
